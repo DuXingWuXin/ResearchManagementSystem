@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SubtopicEditController">
+   <children>
+      <Pane prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="46.0" layoutY="18.0" text="项目ID" />
+            <TextField fx:id="editProSubProjectIDField" layoutX="100.0" layoutY="14.0" prefHeight="23.0" prefWidth="77.0" />
+            <Label layoutX="197.0" layoutY="18.0" text="子课题ID" />
+            <TextField fx:id="editProSubSubtopicIDField" layoutX="262.0" layoutY="14.0" prefHeight="23.0" prefWidth="77.0" promptText="删除时必填" />
+            <Label layoutX="361.0" layoutY="19.0" text="负责人" />
+            <TextField fx:id="editProSubHeadField" layoutX="421.0" layoutY="15.0" prefHeight="23.0" prefWidth="87.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="110.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="38.0" layoutY="18.0" text="技术指标" />
+            <TextField fx:id="editProSubTechnologyField" layoutX="102.0" layoutY="14.0" prefHeight="23.0" prefWidth="487.0" />
+         </children></Pane>
+      <Pane layoutY="60.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="34.0" layoutY="18.0" text="总资金（元）" />
+            <TextField fx:id="editProSubFundField" layoutX="114.0" layoutY="14.0" prefHeight="23.0" prefWidth="123.0" />
+            <Label layoutX="286.0" layoutY="18.0" text="结题日期" />
+            <TextField fx:id="editProSubEndDateField" layoutX="354.0" layoutY="14.0" prefHeight="23.0" prefWidth="115.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="160.0" prefHeight="50.0" prefWidth="600.0" />
+      <Pane layoutY="200.0" prefHeight="50.0" prefWidth="600.0" />
+      <Pane layoutY="250.0" prefHeight="50.0" prefWidth="600.0" />
+      <Pane layoutY="300.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="messageLabel" contentDisplay="CENTER" layoutX="137.0" layoutY="18.0" prefHeight="15.0" prefWidth="329.0" textFill="#e80909" />
+         </children></Pane>
+      <Button fx:id="addProSubButton" layoutX="104.0" layoutY="363.0" mnemonicParsing="false" onAction="#addProSubButtonAction" text="添加" AnchorPane.leftAnchor="100.0" />
+      <Button fx:id="updateProSubButton" layoutX="280.0" layoutY="363.0" mnemonicParsing="false" onAction="#updateProSubButtonAction" text="修改" />
+      <Button fx:id="deleteProSubButton" layoutX="437.0" layoutY="363.0" mnemonicParsing="false" onAction="#deleteProSubButtonAction" text="删除" AnchorPane.rightAnchor="100.0" />
+   </children>
+</AnchorPane>

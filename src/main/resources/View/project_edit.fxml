@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ProjectEditController">
+   <children>
+      <Pane prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="60.0" layoutY="18.0" text="ID" />
+            <TextField fx:id="editProjectIDField" layoutX="100.0" layoutY="14.0" prefHeight="23.0" prefWidth="115.0" promptText="删除时必填"/>
+            <Label layoutX="285.0" layoutY="18.0" text="名称" />
+            <TextField fx:id="editProjectNameField" layoutX="327.0" layoutY="14.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="110.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="52.0" layoutY="18.0" text="内容" />
+            <TextField fx:id="editProjectContentField" layoutX="104.0" layoutY="14.0" prefHeight="23.0" prefWidth="466.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="60.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <TextField fx:id="editProjectHeadField" layoutX="102.0" layoutY="14.0" prefHeight="23.0" prefWidth="100.0" />
+            <Label layoutX="232.0" layoutY="18.0" text="开始日期" />
+            <Label layoutX="397.0" layoutY="18.0" text="结束日期" />
+            <Label layoutX="44.0" layoutY="18.0" text="负责人" />
+            <TextField fx:id="editProjectStartDateField" layoutX="288.0" layoutY="14.0" prefHeight="23.0" prefWidth="87.0" />
+            <TextField fx:id="editProjectEndDateField" layoutX="455.0" layoutY="14.0" prefHeight="23.0" prefWidth="100.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="160.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <TextField fx:id="editProjectFundField" layoutX="104.0" layoutY="14.0" prefHeight="23.0" prefWidth="115.0" />
+            <Label layoutX="45.0" layoutY="18.0" text="总资金" />
+         </children></Pane>
+      <Pane layoutY="200.0" prefHeight="50.0" prefWidth="600.0" />
+      <Pane layoutY="250.0" prefHeight="50.0" prefWidth="600.0" />
+      <Pane layoutY="300.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="messageLabel" contentDisplay="CENTER" layoutX="137.0" layoutY="18.0" prefHeight="15.0" prefWidth="329.0" textFill="#e80909" />
+         </children></Pane>
+      <Button fx:id="addProjectButton" layoutX="104.0" layoutY="363.0" mnemonicParsing="false" onAction="#addProjectButtonAction" text="添加" AnchorPane.leftAnchor="100.0" />
+      <Button fx:id="updateProjectButton" layoutX="280.0" layoutY="363.0" mnemonicParsing="false" onAction="#updateProjectButtonAction" text="修改" />
+      <Button fx:id="deleteProjectButton" layoutX="437.0" layoutY="363.0" mnemonicParsing="false" onAction="#deleteProjectButtonAction" text="删除" AnchorPane.rightAnchor="100.0" />
+   </children>
+</AnchorPane>

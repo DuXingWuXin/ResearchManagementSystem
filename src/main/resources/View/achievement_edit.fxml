@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AchievementEditController">
+   <children>
+      <Pane prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="38.0" layoutY="18.0" text="成果编号" />
+            <TextField fx:id="editAchievementIdField" layoutX="104.0" layoutY="14.0" prefHeight="23.0" prefWidth="48.0" />
+            <Label layoutX="200.0" layoutY="17.0" text="所属项目ID" />
+            <TextField fx:id="editProjectIDField" layoutX="276.0" layoutY="13.0" prefHeight="23.0" prefWidth="48.0" />
+            <Label layoutX="366.0" layoutY="18.0" text="获得时间" />
+            <TextField fx:id="editGetTimeField" layoutX="426.0" layoutY="13.0" prefHeight="23.0" prefWidth="137.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="110.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="40.0" layoutY="18.0" text="排名" />
+            <Label layoutX="184.0" layoutY="18.0" text="类型" />
+            <Label layoutX="366.0" layoutY="18.0" text="专利类型" />
+            <TextField fx:id="editRankField" layoutX="78.0" layoutY="14.0" prefHeight="23.0" prefWidth="48.0" />
+            <TextField fx:id="editTypeField" layoutX="223.0" layoutY="14.0" prefHeight="23.0" prefWidth="115.0" />
+            <TextField fx:id="editPatentTypeField" layoutX="423.0" layoutY="14.0" prefHeight="23.0" prefWidth="147.0" promptText="成果类型若为专利时填写" />
+         </children></Pane>
+      <Pane layoutY="60.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="39.0" layoutY="18.0" text="名称" />
+            <TextField fx:id="editNameField" layoutX="83.0" layoutY="13.0" prefHeight="23.0" prefWidth="489.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="160.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="31.0" layoutY="18.0" text="详细信息" />
+            <TextField fx:id="editInformationField" layoutX="97.0" layoutY="14.0" prefHeight="23.0" prefWidth="489.0" />
+         </children></Pane>
+      <Pane layoutY="200.0" prefHeight="50.0" prefWidth="600.0" />
+      <Pane layoutY="250.0" prefHeight="50.0" prefWidth="600.0" />
+      <Pane layoutY="300.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="messageLabel" contentDisplay="CENTER" layoutX="137.0" layoutY="18.0" prefHeight="15.0" prefWidth="329.0" textFill="#e80909" />
+         </children></Pane>
+      <Button fx:id="addAchievementButton" layoutX="104.0" layoutY="363.0" mnemonicParsing="false" onAction="#addAchievementButtonAction" text="添加" AnchorPane.leftAnchor="100.0" />
+      <Button fx:id="updateAchievementButton" layoutX="280.0" layoutY="363.0" mnemonicParsing="false" onAction="#updateAchievementButtonAction" text="修改" />
+      <Button fx:id="deleteAchievementButton" layoutX="437.0" layoutY="363.0" mnemonicParsing="false" onAction="#deleteAchievementButtonAction" text="删除" AnchorPane.rightAnchor="100.0" />
+   </children>
+</AnchorPane>

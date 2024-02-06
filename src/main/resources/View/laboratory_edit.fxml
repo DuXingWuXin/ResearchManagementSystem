@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LaboratoryEditController">
+   <children>
+      <Pane prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="60.0" layoutY="18.0" text="ID" />
+            <TextField fx:id="editLaboratoryIDField" layoutX="126.0" layoutY="14.0" prefHeight="23.0" prefWidth="115.0" promptText="修改或删除时填写" />
+         </children>
+      </Pane>
+      <Pane layoutY="110.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="43.0" layoutY="18.0" text="研究方向" />
+            <TextField fx:id="editLaboratoryIntroductionField" layoutX="128.0" layoutY="14.0" prefHeight="23.0" prefWidth="466.0" promptText="添加或修改时填写" />
+         </children>
+      </Pane>
+      <Pane layoutY="60.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="53.0" layoutY="18.0" text="名称" />
+            <TextField fx:id="editLaboratoryNameField" layoutX="127.0" layoutY="14.0" promptText="添加或修改时填写" />
+         </children>
+      </Pane>
+      <Pane layoutY="160.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <TextField fx:id="editLaboratoryEmployeeIDField" layoutX="128.0" layoutY="14.0" promptText="添加或修改时填写" />
+            <Label layoutX="48.0" layoutY="18.0" text="秘书ID" />
+         </children></Pane>
+      <Pane layoutY="200.0" prefHeight="50.0" prefWidth="600.0" />
+      <Pane layoutY="250.0" prefHeight="50.0" prefWidth="600.0" />
+      <Pane layoutY="300.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="messageLabel" contentDisplay="CENTER" layoutX="137.0" layoutY="18.0" prefHeight="15.0" prefWidth="329.0" textFill="#e80909" />
+         </children></Pane>
+      <Button fx:id="addLaboratoryButton" layoutX="104.0" layoutY="363.0" mnemonicParsing="false" onAction="#addLaboratoryButtonAction" text="添加" AnchorPane.leftAnchor="100.0" />
+      <Button fx:id="updateLaboratoryButton" layoutX="280.0" layoutY="363.0" mnemonicParsing="false" onAction="#updateLaboratoryButtonAction" text="修改" />
+      <Button fx:id="deleteLaboratoryButton" layoutX="437.0" layoutY="363.0" mnemonicParsing="false" onAction="#deleteLaboratoryButtonAction" text="删除" AnchorPane.rightAnchor="100.0" />
+   </children>
+</AnchorPane>

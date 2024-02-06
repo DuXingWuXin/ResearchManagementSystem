@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ContactEditController">
+   <children>
+      <Pane prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="35.0" layoutY="18.0" text="单位ID" />
+            <TextField fx:id="editCompanyIDField" layoutX="82.0" layoutY="14.0" prefHeight="23.0" prefWidth="77.0"  />
+            <Label layoutX="179.0" layoutY="18.0" text="联系人ID" />
+            <TextField fx:id="editContactIDField" layoutX="238.0" layoutY="14.0" prefHeight="23.0" prefWidth="57.0" promptText="删除时必填"/>
+            <Label layoutX="319.0" layoutY="18.0" text="姓名" />
+            <TextField fx:id="editContactNameField" layoutX="352.0" layoutY="14.0" prefHeight="23.0" prefWidth="116.0" />
+            <Label layoutX="488.0" layoutY="18.0" text="角色" />
+            <TextField fx:id="editContactRoleField" layoutX="521.0" layoutY="14.0" prefHeight="23.0" prefWidth="65.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="110.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="39.0" layoutY="17.0" text="手机号码" />
+            <TextField fx:id="editContactMobilePhoneField" layoutX="112.0" layoutY="13.0" prefHeight="23.0" prefWidth="231.0" />
+         </children></Pane>
+      <Pane layoutY="60.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="40.0" layoutY="18.0" text="办公号码" />
+            <TextField fx:id="editContactOfficePhoneField" layoutX="112.0" layoutY="14.0" prefHeight="23.0" prefWidth="231.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="160.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="43.0" layoutY="18.0" text="email" />
+            <TextField fx:id="editContactEmailField" layoutX="112.0" layoutY="14.0" prefHeight="23.0" prefWidth="231.0" />
+         </children></Pane>
+      <Pane layoutY="200.0" prefHeight="50.0" prefWidth="600.0" />
+      <Pane layoutY="250.0" prefHeight="50.0" prefWidth="600.0" />
+      <Pane layoutY="300.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="messageLabel" contentDisplay="CENTER" layoutX="137.0" layoutY="18.0" prefHeight="15.0" prefWidth="329.0" textFill="#e80909" />
+         </children></Pane>
+      <Button fx:id="addContactButton" layoutX="104.0" layoutY="363.0" mnemonicParsing="false" onAction="#addContactButtonAction" text="添加" AnchorPane.leftAnchor="100.0" />
+      <Button fx:id="updateContactButton" layoutX="280.0" layoutY="363.0" mnemonicParsing="false" onAction="#updateContactButtonAction" text="修改" />
+      <Button fx:id="deleteContactButton" layoutX="437.0" layoutY="363.0" mnemonicParsing="false" onAction="#deleteContactButtonAction" text="删除" AnchorPane.rightAnchor="100.0" />
+   </children>
+</AnchorPane>

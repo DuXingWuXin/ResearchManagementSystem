@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+    <left>
+        <AnchorPane prefHeight="800.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="laboratoryButton" layoutY="15.0" mnemonicParsing="false" onAction="#laboratoryButtonAction" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #A0A0A0;" text="研究室" textAlignment="CENTER">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="projectButton" layoutY="135.0" mnemonicParsing="false" onAction="#projectButtonAction" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #A0A0A0;" text="科研项目" textAlignment="CENTER">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="researcherButton" layoutY="255.0" mnemonicParsing="false" onAction="#researcherButtonAction" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #A0A0A0;" text="科研人员" textAlignment="CENTER">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="secretaryButton" layoutY="315.0" mnemonicParsing="false" onAction="#secretaryButtonAction" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #A0A0A0;" text="秘书" textAlignment="CENTER">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="companyButton" layoutY="345.0" mnemonicParsing="false" onAction="#companyButtonAction" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #A0A0A0;" text="相关单位" textAlignment="CENTER">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+            <Button fx:id="laboratoryOfficeButton" layoutY="45.0" mnemonicParsing="false" onAction="#laboratoryOfficeButtonAction" prefHeight="30.0" prefWidth="150.0" text="办公场地" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="laboratoryDirectorButton" layoutY="75.0" mnemonicParsing="false" onAction="#laboratoryDirectorButtonAction" prefHeight="30.0" prefWidth="150.0" text="主任" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="laboratoryResearcherButton" layoutY="105.0" mnemonicParsing="false" onAction="#laboratoryResearcherButtonAction" prefHeight="30.0" prefWidth="150.0" text="研究室科研人员" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="projectResearcherButton" layoutY="165.0" mnemonicParsing="false" onAction="#projectResearcherButtonAction" prefHeight="30.0" prefWidth="150.0" text="项目人员" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="projectSubtopicButton" layoutY="195.0" mnemonicParsing="false" onAction="#projectSubtopicButtonAction" prefHeight="30.0" prefWidth="150.0" text="项目子课题" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="projectAchievementButton" layoutY="225.0" mnemonicParsing="false" onAction="#projectAchievementButtonAction" prefHeight="30.0" prefWidth="150.0" text="项目成果" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="projectAchievementContributorButton" layoutY="285.0" mnemonicParsing="false" onAction="#projectAchievementContributorButtonAction" prefHeight="30.0" prefWidth="150.0" text="项目成果贡献人" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="companyContactButton" layoutY="375.0" mnemonicParsing="false" onAction="#companyContactButtonAction" prefHeight="30.0" prefWidth="150.0" text="单位代表" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="800.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="275.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@logo.png" />
+                    </image>
+                </ImageView>
+            <TableView fx:id="laboratoryTable" prefHeight="750.0" prefWidth="850.0" visible="false">
+              <columns>
+                <TableColumn fx:id="laboratoryIDTableColumn" prefWidth="47.0" text="ID" />
+                <TableColumn fx:id="laboratoryNameTableColumn" prefWidth="134.0" text="名称" />
+                  <TableColumn fx:id="laboratoryIntroductionTableColumn" prefWidth="610.0" text="研究方向" />
+                  <TableColumn fx:id="laboratorySecretaryIDTableColumn" prefWidth="58.0" text="秘书ID" />
+              </columns>
+            </TableView>
+            <Button fx:id="editLaboratoryButton" disable="true" layoutX="85.0" layoutY="763.0" mnemonicParsing="false" onAction="#editLaboratoryButtonAction" text="编辑" visible="false" />
+            <Button fx:id="searchLaboratoryButton" disable="true" layoutX="248.0" layoutY="763.0" mnemonicParsing="false" onAction="#searchLaboratoryButtonAction" text="查询" visible="false" />
+            <TextField fx:id="searchLaboratoryNameField" layoutX="297.0" layoutY="763.0" promptText="输入查询的研究室名称" visible="false" />
+            <TableView fx:id="projectTable" prefHeight="750.0" prefWidth="850.0" visible="false">
+              <columns>
+                <TableColumn fx:id="projectIDTableColumn" prefWidth="42.0" text="ID" />
+                <TableColumn fx:id="projectNameTableColumn" prefWidth="120.0" text="名称" />
+                  <TableColumn fx:id="projectHeadTableColumn" prefWidth="61.0" text="负责人" />
+                  <TableColumn fx:id="projectContentTableColumn" prefWidth="429.0" text="内容" />
+                  <TableColumn fx:id="projectFundTableColumn" minWidth="0.0" prefWidth="60.0" text="经费" />
+                  <TableColumn fx:id="projectStartDateTableColumn" prefWidth="69.0" text="开始日期" />
+                  <TableColumn fx:id="projectEndDateTableColumn" prefWidth="68.0" text="结束日期" />
+              </columns>
+            </TableView>
+            <Button fx:id="editProjectButton" disable="true" layoutX="78.0" layoutY="763.0" mnemonicParsing="false" onAction="#editProjectButtonAction" text="编辑" visible="false" />
+            <Button fx:id="searchProjectButton" disable="true" layoutX="205.0" layoutY="763.0" mnemonicParsing="false" onAction="#searchProjectButtonAction" text="查询" visible="false" />
+            <TextField fx:id="searchProjectNameField" layoutX="248.0" layoutY="763.0" promptText="输入想查询的项目名称" visible="false" />
+            <TableView fx:id="researcherTable" prefHeight="750.0" prefWidth="850.0" visible="false">
+              <columns>
+                <TableColumn fx:id="researcherIDTableColumn" prefWidth="45.0" text="ID" />
+                <TableColumn fx:id="researcherNameTableColumn" prefWidth="65.0" text="姓名" />
+                  <TableColumn fx:id="researcherGenderTableColumn" prefWidth="50.0" text="性别" />
+                  <TableColumn fx:id="researcherTitleTableColumn" prefWidth="75.0" text="职称" />
+                  <TableColumn fx:id="researcherAgeTableColumn" prefWidth="60.0" text="年龄" />
+                  <TableColumn fx:id="researcherAreaTableColumn" prefWidth="475.0" text="研究领域" />
+                  <TableColumn fx:id="researcherLaboratoryIDTableColumn" prefWidth="79.0" text="所属研究室ID" />
+              </columns>
+            </TableView>
+            <Button fx:id="editResearcherButton" disable="true" layoutX="85.0" layoutY="763.0" mnemonicParsing="false" onAction="#editResearcherButtonAction" text="编辑" visible="false" />
+            <Button fx:id="searchResearcherButton" disable="true" layoutX="225.0" layoutY="763.0" mnemonicParsing="false" onAction="#searchResearcherButtonAction" text="查询" visible="false" />
+            <TextField fx:id="searchResearcherNameField" layoutX="275.0" layoutY="763.0" promptText="输入想查询的研究员姓名" visible="false" />
+            <TableView fx:id="secretaryTable" prefHeight="750.0" prefWidth="850.0" visible="false">
+              <columns>
+                <TableColumn fx:id="secretaryIDTableColumn" prefWidth="43.0" text="ID" />
+                <TableColumn fx:id="secretaryNameTableColumn" prefWidth="65.0" text="姓名" />
+                  <TableColumn fx:id="secretaryGenderTableColumn" prefWidth="46.0" text="性别" />
+                  <TableColumn fx:id="secretaryAgeTableColumn" prefWidth="49.0" text="年龄" />
+                  <TableColumn fx:id="secretaryHireDateTableColumn" prefWidth="75.0" text="上任日期" />
+                  <TableColumn fx:id="secretaryDutyTableColumn" prefWidth="571.0" text="职责" />
+              </columns>
+            </TableView>
+            <Button fx:id="editSecretaryButton" disable="true" layoutX="98.0" layoutY="763.0" mnemonicParsing="false" onAction="#editSecretaryButtonAction" text="编辑" visible="false" />
+            <Button fx:id="searchSecretaryButton" disable="true" layoutX="205.0" layoutY="763.0" mnemonicParsing="false" onAction="#searchSecretaryButtonAction" text="查询" visible="false" />
+            <TextField fx:id="searchSecretaryNameField" layoutX="248.0" layoutY="763.0" promptText="输入想查询的秘书姓名" visible="false" />
+            <TableView fx:id="companyTable" prefHeight="750.0" prefWidth="850.0" visible="false">
+              <columns>
+                <TableColumn fx:id="companyIDTableColumn" prefWidth="53.0" text="ID" />
+                <TableColumn fx:id="companyNameTableColumn" prefWidth="200.0" text="单位名称" />
+                  <TableColumn fx:id="companyAddressTableColumn" prefWidth="428.0" text="单位地址" />
+                  <TableColumn fx:id="companyProjectIDTableColumn" prefWidth="73.0" text="相关项目ID" />
+                  <TableColumn fx:id="companyRoleTableColumn" prefWidth="95.0" text="角色" />
+              </columns>
+            </TableView>
+            <Button fx:id="editCompanyButton" disable="true" layoutX="98.0" layoutY="763.0" mnemonicParsing="false" onAction="#editCompanyButtonAction" text="编辑" visible="false" />
+            <Button fx:id="searchCompanyButton" disable="true" layoutX="261.0" layoutY="763.0" mnemonicParsing="false" text="查询" onAction="#searchCompanyButtonAction" visible="false" />
+            <TextField fx:id="searchCompanyNameField" layoutX="310.0" layoutY="763.0" promptText="输入想查询的单位名称" visible="false" />
+            <TableView fx:id="laboratoryOfficeTable" prefHeight="750.0" prefWidth="850.0" visible="false">
+              <columns>
+                <TableColumn fx:id="labOfficeLabIDTableColumn" prefWidth="75.0" text="研究室ID" />
+                <TableColumn fx:id="labOfficeOfficeIDTableColumn" prefWidth="75.0" text="场地ID" />
+                  <TableColumn fx:id="officeAreaTableColumn" prefWidth="102.0" text="面积（平方米）" />
+                  <TableColumn fx:id="officeLocationTableColumn" prefWidth="597.0" text="地址" />
+              </columns>
+            </TableView>
+            <Button fx:id="editLaboratoryOfficeButton" disable="true" layoutX="98.0" layoutY="763.0" mnemonicParsing="false" onAction="#editLaboratoryOfficeButtonAction" text="编辑" visible="false" />
+            <Button fx:id="searchOfficeByLaboratoryIDButton" disable="true" layoutX="238.0" layoutY="763.0" mnemonicParsing="false" onAction="#searchOfficeByLaboratoryIDButtonAction" text="查询" visible="false" />
+            <TextField fx:id="searchOfficeByLaboratoryIDField" layoutX="297.0" layoutY="763.0" promptText="输入想查询的研究室ID" visible="false" />
+            <TextField fx:id="searchDirectorByLaboratoryIDField" layoutX="288.0" layoutY="763.0" promptText="输入想查询的研究室ID" visible="false" />
+            <Button fx:id="editLaboratoryDirectorButton" disable="true" layoutX="105.0" layoutY="763.0" mnemonicParsing="false" onAction="#editLaboratoryDirectorButtonAction" text="编辑" visible="false" />
+            <Button fx:id="searchDirectorByLaboratoryIDButton" disable="true" layoutX="241.0" layoutY="763.0" mnemonicParsing="false" onAction="#searchDirectorByLaboratoryIDButtonAction" text="查询" visible="false" />
+            <TableView fx:id="laboratoryDirectorTable" prefHeight="750.0" prefWidth="850.0" visible="false">
+              <columns>
+                <TableColumn fx:id="labDirLabIDTableColumn" prefWidth="75.0" text="研究室ID" />
+                <TableColumn fx:id="labDirDirectorIDTableColumn" prefWidth="75.0" text="主任ID" />
+                  <TableColumn fx:id="directorStartDateTableColumn" prefWidth="103.0" text="上任时间" />
+                  <TableColumn fx:id="directorTenureYearTableColumn" prefWidth="75.0" text="任期（年）" />
+              </columns>
+            </TableView>
+            <TableView fx:id="laboratoryResearcherTable" prefHeight="750.0" prefWidth="850.0" visible="false">
+              <columns>
+                <TableColumn fx:id="labResLabIDTableColumn" prefWidth="58.0" text="研究室ID" />
+                <TableColumn fx:id="labResResearcherIDTableColumn" prefWidth="70.0" text="科研人员ID" />
+                  <TableColumn fx:id="labResNameTableColumn" prefWidth="83.0" text="姓名" />
+                  <TableColumn fx:id="labResGenderTableColumn" prefWidth="51.0" text="性别" />
+                  <TableColumn fx:id="labResTitleTableColumn" prefWidth="94.0" text="职称" />
+                  <TableColumn fx:id="labResAgeTableColumn" prefWidth="75.0" text="年龄" />
+                  <TableColumn fx:id="labResResearchAreaTableColumn" prefWidth="418.0" text="研究领域" />
+              </columns>
+            </TableView>
+            <Button fx:id="editLaboratoryResearcherButton" disable="true" layoutX="98.0" layoutY="763.0" mnemonicParsing="false" onAction="#editLaboratoryResearcherButtonAction" text="编辑" visible="false" />
+            <Button fx:id="searchResearcherByLaboratoryIDButton" disable="true" layoutX="231.0" layoutY="763.0" mnemonicParsing="false" onAction="#searchResearcherByLaboratoryIDButtonAction" text="查询" visible="false" />
+            <TextField fx:id="searchResearcherByLaboratoryIDField" layoutX="275.0" layoutY="763.0" promptText="输入想查询的研究室ID" visible="false" />
+            <TableView fx:id="projectResearcherTable" prefHeight="750.0" prefWidth="850.0" visible="false">
+              <columns>
+                <TableColumn fx:id="proResProjectIDTableColumn" prefWidth="55.0" text="项目ID" />
+                <TableColumn fx:id="proResResearcherTableColumn" prefWidth="72.0" text="项目人员ID" />
+                  <TableColumn fx:id="proResJoinTimeTableColumn" prefWidth="97.0" text="加入日期" />
+                  <TableColumn fx:id="proResControlFundTableColumn" prefWidth="75.0" text="可支配资金" />
+                  <TableColumn fx:id="proResWorkloadTableColumn" prefWidth="101.0" text="工作量（小时）" />
+              </columns>
+            </TableView>
+            <Button fx:id="editProjectResearcherButton" disable="true" layoutX="91.0" layoutY="763.0" mnemonicParsing="false" onAction="#editProjectResearcherButtonAction" text="编辑" visible="false" />
+            <Button fx:id="searchResearcherByProjectIDButton" disable="true" layoutX="218.0" layoutY="763.0" mnemonicParsing="false" onAction="#searchResearcherByProjectIDButtonAction" text="查询" visible="false" />
+            <TextField fx:id="searchResearcherByProjectIDField" layoutX="268.0" layoutY="763.0" promptText="输入想查询的项目ID" visible="false" />
+            <TableView fx:id="projectSubtopicTable" prefHeight="750.0" prefWidth="850.0" visible="false">
+              <columns>
+                <TableColumn fx:id="proSubProjectIDTableColumn" prefWidth="75.0" text="项目ID" />
+                <TableColumn fx:id="proSubSubtopicIDTableColumn" prefWidth="75.0" text="子课题ID" />
+                  <TableColumn fx:id="proSubHeadTableColumn" prefWidth="75.0" text="负责人" />
+                  <TableColumn fx:id="proSubEndDateTableColumn" prefWidth="75.0" text="结题日期" />
+                  <TableColumn fx:id="proSubTotalFundTableColumn" prefWidth="83.0" text="总资金（元）" />
+                  <TableColumn fx:id="proSubTechnologyTableColumn" prefWidth="466.0" text="技术指标" />
+              </columns>
+            </TableView>
+            <Button fx:id="editProjectSubtopicButton" disable="true" layoutX="91.0" layoutY="763.0" mnemonicParsing="false" onAction="#editProjectSubtopicButtonAction" text="编辑" visible="false" />
+            <Button fx:id="searchSubtopicByProjectIDButton" disable="true" layoutX="231.0" layoutY="763.0" mnemonicParsing="false" onAction="#searchSubtopicByProjectIDButtonAction" text="查询" visible="false" />
+            <TextField fx:id="searchSubtopicByProjectIDField" layoutX="275.0" layoutY="763.0" promptText="输入想查询的项目ID" visible="false" />
+            <TableView fx:id="projectAchievementTable" prefHeight="750.0" prefWidth="850.0" visible="false">
+              <columns>
+                <TableColumn fx:id="proAchProjectIDTableColumn" prefWidth="75.0" text="项目ID" />
+                <TableColumn fx:id="proAchAchievementIDTableColumn" prefWidth="53.0" text="成果ID" />
+                  <TableColumn fx:id="proAchNameTableColumn" prefWidth="75.0" text="名称" />
+                  <TableColumn fx:id="proAchGetTimeTableColumn" prefWidth="75.0" text="获得时间" />
+                  <TableColumn fx:id="proAchRankTableColumn" prefWidth="75.0" text="排名" />
+                  <TableColumn fx:id="proAchTypeTableColumn" prefWidth="75.0" text="类别" />
+<!--                  <TableColumn fx:id="proAchPatentTypeTableColumn" prefWidth="75.0" text="专利类别" />-->
+                  <TableColumn fx:id="proAchInformationTableColumn" prefWidth="346.0" text="详细信息" />
+              </columns>
+            </TableView>
+            <Button fx:id="editProjectAchievementButton" disable="true" layoutX="71.0" layoutY="763.0" mnemonicParsing="false" onAction="#editProjectAchievementButtonAction" text="编辑" visible="false" />
+            <Button fx:id="searchAchievementByProjectIDButton" disable="true" layoutX="198.0" layoutY="763.0" mnemonicParsing="false" onAction="#searchAchievementByProjectIDButtonAction" text="查询" visible="false" />
+            <TextField fx:id="searchAchievementByProjectIDField" layoutX="248.0" layoutY="763.0" promptText="输入想查询的项目ID" visible="false" />
+            <TableView fx:id="achievementContributorTable" prefHeight="750.0" prefWidth="850.0" visible="false">
+              <columns>
+                <TableColumn fx:id="achConAchievementIDTableColumn" prefWidth="75.0" text="项目成果ID" />
+                <TableColumn fx:id="achConAchievementNameTableColumn" prefWidth="75.0" text="名称" />
+                  <TableColumn fx:id="achConContributorTableColumn" prefWidth="75.0" text="贡献人ID" />
+                  <TableColumn fx:id="achConContributorNameTableColumn" prefWidth="75.0" text="姓名" />
+              </columns>
+            </TableView>
+            <Button fx:id="editAchievementContributorButton" disable="true" layoutX="91.0" layoutY="763.0" mnemonicParsing="false" onAction="#editAchievementContributorButtonAction" text="编辑" visible="false" />
+            <Button fx:id="searchContributorByAchievementIDButton" disable="true" layoutX="221.0" layoutY="763.0" mnemonicParsing="false" onAction="#searchContributorByAchievementIDButtonAction" text="查询" visible="false" />
+            <TextField fx:id="searchContributorByAchievementIDField" layoutX="268.0" layoutY="763.0" promptText="输入想查询的成果ID" visible="false" />
+            <TableView fx:id="companyContactTable" prefHeight="750.0" prefWidth="850.0" visible="false">
+              <columns>
+                <TableColumn fx:id="comConCompanyIDTableColumn" prefWidth="51.0" text="单位ID" />
+                <TableColumn fx:id="comConContactIDTableColumn" prefWidth="76.0" text="单位代表ID" />
+                  <TableColumn fx:id="comConContactNameTableColumn" prefWidth="65.0" text="姓名" />
+                  <TableColumn fx:id="comConOfficePhoneTableColumn" prefWidth="180.0" text="办公号码" />
+                  <TableColumn fx:id="comConMobilePhoneTableColumn" prefWidth="172.0" text="手机" />
+                  <TableColumn fx:id="comConEmailTableColumn" minWidth="0.0" prefWidth="218.0" text="邮箱" />
+                  <TableColumn fx:id="comConContactTypeTableColumn" minWidth="0.0" prefWidth="87.0" text="类别" />
+              </columns>
+            </TableView>
+            <Button fx:id="editCompanyContactButton" disable="true" layoutX="71.0" layoutY="763.0" mnemonicParsing="false" onAction="#editCompanyContactButtonAction" text="编辑" visible="false" />
+            <Button fx:id="searchCompanyContactButton" disable="true" layoutX="198.0" layoutY="763.0" mnemonicParsing="false" onAction="#searchCompanyContactButtonAction" text="查询" visible="false" />
+            <TextField fx:id="searchCompanyContactField" layoutX="248.0" layoutY="763.0" promptText="输入想查询的单位ID" visible="false" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

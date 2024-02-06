@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CompanyEditController">
+   <children>
+      <Pane prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="46.0" layoutY="18.0" text="ID" />
+            <TextField fx:id="editCompanyIDField" layoutX="72.0" layoutY="14.0" prefHeight="23.0" prefWidth="77.0" promptText="删除时必填" />
+            <Label layoutX="179.0" layoutY="18.0" text="名称" />
+            <TextField fx:id="editCompanyNameField" layoutX="215.0" layoutY="14.0" prefHeight="23.0" prefWidth="364.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="110.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="39.0" layoutY="17.0" text="地址" />
+            <TextField fx:id="editCompanyAddressField" layoutX="74.0" layoutY="13.0" prefHeight="23.0" prefWidth="506.0" />
+         </children></Pane>
+      <Pane layoutY="60.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="39.0" layoutY="18.0" text="相关项目ID" />
+            <TextField fx:id="editCompanyProjectIDField" layoutX="122.0" layoutY="14.0" prefHeight="23.0" prefWidth="77.0" promptText="删除时必填" />
+            <Label layoutX="239.0" layoutY="18.0" text="角色" />
+            <TextField fx:id="editCompanyRoleField" layoutX="281.0" layoutY="14.0" prefHeight="23.0" prefWidth="77.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="160.0" prefHeight="50.0" prefWidth="600.0" />
+      <Pane layoutY="200.0" prefHeight="50.0" prefWidth="600.0" />
+      <Pane layoutY="250.0" prefHeight="50.0" prefWidth="600.0" />
+      <Pane layoutY="300.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="messageLabel" contentDisplay="CENTER" layoutX="137.0" layoutY="18.0" prefHeight="15.0" prefWidth="329.0" textFill="#e80909" />
+         </children></Pane>
+      <Button fx:id="addCompanyButton" layoutX="104.0" layoutY="363.0" mnemonicParsing="false" onAction="#addCompanyButtonAction" text="添加" AnchorPane.leftAnchor="100.0" />
+      <Button fx:id="updateCompanyButton" layoutX="280.0" layoutY="363.0" mnemonicParsing="false" onAction="#updateCompanyButtonAction" text="修改" />
+      <Button fx:id="deleteCompanyButton" layoutX="437.0" layoutY="363.0" mnemonicParsing="false" onAction="#deleteCompanyButtonAction" text="删除" AnchorPane.rightAnchor="100.0" />
+   </children>
+</AnchorPane>
